@@ -1,0 +1,118 @@
+/* App.jsx Styles */
+/* ==================== COLORS & DESIGN SYSTEM ==================== */
+:root {
+  --color-primary: #8b5cf6;
+  --color-primary-dark: #7c3aed;
+  --color-primary-light: #a78bfa;
+  --color-accent-gold: #f59e0b;
+  --color-accent-warm: #d97706;
+  --color-accent-rose: #ec4899;
+  --color-accent-islamic: #1e3a8a;
+  
+  --color-bg-light: #ffffff;
+  --color-bg-light-alt: #f8fafc;
+  --color-bg-dark: #0f172a;
+  --color-bg-dark-alt: #1e293b;
+  --color-bg-dark-card: #1e293b;
+  
+  --color-text-light: #1e293b;
+  --color-text-light-secondary: #64748b;
+  --color-text-dark: #f1f5f9;
+  --color-text-dark-secondary: #cbd5e1;
+  
+  --color-border-light: #e2e8f0;
+  --color-border-dark: #334155;
+  
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  direction: rtl;
+  background-color: var(--color-bg-light);
+  transition: background-color 0.3s ease;
+}
+
+.app-layout.dark-mode {
+  background-color: var(--color-bg-dark);
+}
+
+.app-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.8) 100%);
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.app-layout.dark-mode .app-main-header {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border-color: var(--color-border-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.app-main-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--color-text-light);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .app-main-header h2 {
+  color: var(--color-text-dark);
+  -webkit-text-fill-color: unset;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.theme-toggle-btn {
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.page-view {
+  margin-top: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

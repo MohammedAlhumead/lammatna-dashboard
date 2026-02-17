@@ -1,0 +1,136 @@
+/* Quran Page Styles */
+
+.quran-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quran-page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quran-page-header h2 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .quran-page-header h2 {
+  color: #f1f5f9;
+}
+
+.quran-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.app-layout.dark-mode .quran-card {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.quran-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.app-layout.dark-mode .quran-card:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.quran-surah-info {
+  color: #8b5cf6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.app-layout.dark-mode .quran-surah-info {
+  color: #a78bfa;
+}
+
+.quran-ayah-text {
+  font-size: 1.8rem;
+  line-height: 1.9;
+  color: #1e293b;
+  font-weight: 500;
+  margin: 20px 0;
+  direction: rtl;
+  font-family: 'Arabic Typesetting', 'Arial', serif;
+}
+
+.app-layout.dark-mode .quran-ayah-text {
+  color: #f1f5f9;
+}
+
+.quran-ayah-reference {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.app-layout.dark-mode .quran-ayah-reference {
+  color: #cbd5e1;
+}
+
+.quran-audio-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.quran-audio {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.quran-audio audio {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.quran-next-btn {
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  align-self: center;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.quran-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.quran-next-btn:active {
+  transform: translateY(0);
+}
+
+.quran-loading {
+  color: #8b5cf6;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

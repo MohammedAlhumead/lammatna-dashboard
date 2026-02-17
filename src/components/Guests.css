@@ -1,0 +1,302 @@
+/* Guests.jsx Styles */
+
+.guests-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.guests-page-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .guests-page-header h2 {
+  color: #f1f5f9;
+}
+
+.guests-add-btn,
+.foods-add-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.guests-add-btn:hover,
+.foods-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.guests-add-btn:active,
+.foods-add-btn:active {
+  transform: translateY(0);
+}
+
+/* Add Guest Form */
+.add-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app-layout.dark-mode .add-form {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .form-title {
+  color: #f1f5f9;
+}
+
+.form-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.app-layout.dark-mode .form-label {
+  color: #f1f5f9;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.app-layout.dark-mode .form-field input {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+.form-field input::placeholder {
+  color: #94a3b8;
+}
+
+.app-layout.dark-mode .form-field input::placeholder {
+  color: #64748b;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.app-layout.dark-mode .form-field input:focus {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: #6ee7b7;
+}
+
+.form-field input[type="text"]:not([placeholder]) {
+  direction: ltr;
+  text-align: right;
+}
+
+.form-submit-btn {
+  padding: 12px 28px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-submit-btn.add {
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.form-submit-btn.add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.form-submit-btn.edit {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.form-submit-btn.edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+/* Guest Cards Grid */
+.guests-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.guest-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-layout.dark-mode .guest-card {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.guest-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 0 60px;
+}
+
+.guest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.app-layout.dark-mode .guest-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.guest-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.guest-name {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.app-layout.dark-mode .guest-name {
+  color: #f1f5f9;
+}
+
+.guest-phone {
+  color: #64748b;
+  margin-bottom: 25px;
+  direction: ltr;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.app-layout.dark-mode .guest-phone {
+  color: #cbd5e1;
+}
+
+.guest-card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.35);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(239, 68, 68, 0.35);
+}

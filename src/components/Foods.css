@@ -1,0 +1,311 @@
+/* Foods.jsx Styles */
+
+.foods-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.foods-page-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .foods-page-header h2 {
+  color: #f1f5f9;
+}
+
+.foods-add-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.foods-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.foods-add-btn:active {
+  transform: translateY(0);
+}
+
+/* ============ INLINE FORM (Like Guests) ============ */
+
+.add-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app-layout.dark-mode .add-form {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.app-layout.dark-mode .form-title {
+  color: #f1f5f9;
+}
+
+.form-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 160px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.app-layout.dark-mode .form-label {
+  color: #f1f5f9;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #1e293b;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.app-layout.dark-mode .form-input {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.app-layout.dark-mode .form-input::placeholder {
+  color: #64748b;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.form-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-input option {
+  background: white;
+  color: #1e293b;
+}
+
+.form-input option:disabled {
+  display: none;
+}
+
+.icon-select {
+  font-size: 1.1rem;
+}
+
+.form-submit-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  height: 45px;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+.form-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ============ FOOD CARDS GRID ============ */
+
+.foods-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-layout.dark-mode .food-card {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.food-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 0 60px;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.app-layout.dark-mode .food-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.food-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.food-name {
+  margin: 10px 0;
+  color: #1e293b;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.app-layout.dark-mode .food-name {
+  color: #f1f5f9;
+}
+
+.food-type-badge {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.food-type-badge.food-type-main {
+  background: rgba(16, 185, 129, 0.15);
+  color: #129e7d;
+}
+
+.app-layout.dark-mode .food-type-badge.food-type-main {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+}
+
+.food-type-badge.food-type-appetizer {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1e40af;
+}
+
+.app-layout.dark-mode .food-type-badge.food-type-appetizer {
+  background: rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+}
+
+.food-type-badge.food-type-sweets {
+  background: rgba(236, 72, 153, 0.15);
+  color: #9f1239;
+}
+
+.app-layout.dark-mode .food-type-badge.food-type-sweets {
+  background: rgba(236, 72, 153, 0.25);
+  color: #fbcfe8;
+}
+
+.food-type-badge.food-type-drinks {
+  background: rgba(245, 158, 11, 0.15);
+  color: #92400e;
+}
+
+.app-layout.dark-mode .food-type-badge.food-type-drinks {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fcd34d;
+}
+
+.food-delete-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.food-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
