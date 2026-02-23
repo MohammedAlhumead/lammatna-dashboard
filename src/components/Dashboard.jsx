@@ -11,7 +11,7 @@ function Dashboard({ gatherings, guests, foods }) {
     
     // تاريخ معدل (ناقص يوم) عشان ناخذ منه رقم "28"
     const adjustedDate = new Date();
-    adjustedDate.setDate(adjustedDate.getDate() - 1);
+    adjustedDate.setDate(adjustedDate.getDate());
 
     // 1. استخراج اسم اليوم فقط (من تاريخ اليوم)
     const weekday = new Intl.DateTimeFormat('ar-SA', { 
