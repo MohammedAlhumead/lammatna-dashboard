@@ -4,7 +4,6 @@ import './App.css';
 import './App.custom.css';
 
 import SideBar from './components/SideBar';
-import Login from './pages/Login';
 import Dashboard from './components/Dashboard';
 import Gatherings from './components/Gatherings';
 import Guests from './components/Guests';
@@ -16,7 +15,6 @@ import AdhkarPage from './components/AdhkarPage';
 import { gatheringsData, foodsData, contactsData } from './data/data';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activePage, setActivePage] = useState("dashboard");
   const [darkMode, setDarkMode] = useState(false);
 
@@ -47,26 +45,12 @@ function App() {
     setDarkMode(!darkMode);
   };
 
-  // --- 🔥 دالة تسجيل الخروج الجديدة ---
+  // --- دالة تسجيل الخروج ---
   const handleLogout = () => {
-    setIsLoggedIn(false); // هذا سيعيد التطبيق لحالة اللوجن فوراً
     setActivePage("dashboard"); // إعادة تعيين الصفحة
   };
 
-  // الحالة 1: غير مسجل دخول
-  if (!isLoggedIn) {
-    return (
-      <Router>
-        <div className="app-container">
-          <Routes>
-            <Route path="*" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-          </Routes>
-        </div>
-      </Router>
-    );
-  }
-
-  // الحالة 2: مسجل دخول
+  // الحالة الرئيسية: مسجل دخول (بدون login)
   return (
     <Router>
       <div className={darkMode ? "app-layout dark-mode" : "app-layout"}>

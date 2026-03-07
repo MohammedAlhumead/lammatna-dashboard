@@ -12,7 +12,7 @@ function Login({ setIsLoggedIn }) {
     const handleLogin = (e) => {
         e.preventDefault();
         
-        if (email === "admin@hashplus.com" && password === "123456") {
+        if (email === "" && password === "") {
             setIsLoggedIn(true);
             navigate("/dashboard");
         } else {
